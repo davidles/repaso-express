@@ -46,6 +46,19 @@ nav ul li a{
     text-decoration: none;
 }
 
+nav ul li{
+    padding: 5px;
+    transition: all .8s;
+}
+
+nav ul li:hover{
+    background-color: aqua;
+}
+
+nav ul li:hover a{
+    color: black;
+}
+
 .img-avatar{
     background-color: aqua;
     width: 50px;
