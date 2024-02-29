@@ -11,11 +11,15 @@ body{
 
 header{
     color: white;
-    padding: 10px 15px;
+    padding: 0px 15px;
     background-color: rgb(33, 33, 202);
     display: flex;
     justify-content: space-between;
 
+}
+
+header h1{
+    display: none;
 }
 
 .header-nav{
@@ -54,7 +58,12 @@ nav ul li a{
     align-items: center;
 }
 
-.img-avatar img{
+.logo > img{
+    width: 50px;
+    cursor: pointer;
+}
+
+.img-avatar > img{
     width: 20px;
 }
 
