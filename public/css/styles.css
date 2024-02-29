@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(216, 216, 216);
+}
+
+header{
+    color: white;
+    padding: 10px 15px;
+    background-color: rgb(33, 33, 202);
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.header-nav{
+    gap: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav{
+    width: 100%;
+}
+
+nav ul{
+    gap: 10px;
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly; 
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.img-avatar{
+    background-color: aqua;
+    width: 50px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-avatar img{
+    width: 20px;
+}
+
+/* Main */
+main{
+    padding: 30px;
+}
+
+form{
+    background-color: white;
+    margin: auto;
+    width: 320px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+form .label-form{
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+form .label-form input{
+    height: 2rem;
+    border-radius: 5px;
+    border: 2px solid rgb(33, 32, 32);
+    outline: none;
+    padding: 3px 10px;
+}
+
+form .label-form input:focus{
+    border: 2px solid rgb(88, 88, 255);
+}
+
+.btn, button[type="submit"] {
+    border-radius: 5px;
+    height: 2.2rem;
+    background-color: rgb(7, 40, 205);
+    border: 2px solid transparent;
+    color: white;
+    font-weight: 300;
+    letter-spacing: 2px;
+    width: 100%;
+    margin-bottom: 5px;
+    transition: all .5s;
+}
+
+button[type="submit"]:hover, .btn:hover{
+    background-color: rgb(7, 205, 53);
+    cursor: pointer;
+}
