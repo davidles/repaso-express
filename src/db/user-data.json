@@ -1,0 +1,14 @@
+[
+  {
+    "id": "08e1b6a9-d552-4d4c-8d70-b855942478a2",
+    "username": "Lionel",
+    "email": "leo@dh.com",
+    "password": "admin"
+  },
+  {
+    "id": "52bd55d1-347d-49eb-8728-2ac0805a741a",
+    "username": "Seriogio",
+    "email": "sergio@dh.com",
+    "password": "admin2"
+  }
+]
