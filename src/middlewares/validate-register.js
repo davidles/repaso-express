@@ -13,10 +13,10 @@ const validationErrors = ( req, res, next ) => {
 
     if(errors.isEmpty()){
         // No hay errores
-        next()
+        return next()
     }
 
-    res.status(404).render('register', {
+    res.render('register', {
         old: req.body,
         errors: errors.mapped() 
     })
