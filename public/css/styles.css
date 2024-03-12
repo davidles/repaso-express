@@ -83,9 +83,14 @@ nav ul li:hover a{
 /* Main */
 main{
     padding: 30px;
+    display: flex;
 }
 
-form{
+.img-portada{
+    width: 50%;
+}
+
+form.form-data, .info-card{
     background-color: white;
     margin: auto;
     width: 320px;
@@ -95,14 +100,14 @@ form{
     border-radius: 10px;
 }
 
-form .label-form{
+form.form-data .label-form{
     margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     
 }
 
-form .label-form input{
+form.form-data .label-form input{
     height: 2rem;
     border-radius: 5px;
     border: 2px solid rgb(33, 32, 32);
@@ -110,7 +115,7 @@ form .label-form input{
     padding: 3px 10px;
 }
 
-form .label-form input:focus{
+form.form-data .label-form input:focus{
     border: 2px solid rgb(88, 88, 255);
 }
 
@@ -131,3 +136,48 @@ button[type="submit"]:hover, .btn:hover{
     background-color: rgb(7, 205, 53);
     cursor: pointer;
 }
+
+.list{
+    width: 320px;
+    padding: 20px;
+    margin: auto;
+}
+
+.item-list{
+    width: 100%;
+    list-style: none;
+    padding: 5px;
+    background-color: white;
+}
+
+.user-data{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}   
+
+.btn-group{
+    display: flex;
+    gap: 5px;
+}
+
+.btn-redirect{
+    padding: 3px;
+}
+
+.list li:nth-child(even){
+    background-color: black;
+    color: white;
+}
+
+/* Profile */
+
+.info-card{
+    margin: auto;
+}
+
+div.info{
+    margin: 15px auto;
+    line-height: 2.5rem;
+}
+
