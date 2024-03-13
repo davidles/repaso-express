@@ -10,8 +10,32 @@
 
     <main>
         <!-- IMAGEN -->
-        <img src="/images/node.jpg" alt="Logo">
+        <img src="/images/node.jpg" alt="Logo" class="img-portada">
         <!-- TODO mostrar lista de usuarios (condicional) Boton para eliminar o editar -->
+
+        <% if(data.length > 0){ %>
+            <ul class="list">
+                <% data.forEach(( user ) => { %>
+                    <li class="item-list">
+                        <article class="user-data">
+                            <h3> <%= user.username %> </h3>
+                            <div class="btn-group">
+                                <a href="/users/profile/<%= user.id %>">
+                                    <button class="redirect">😊</button>
+                                </a>
+                                <a href="/users/edit/<%= user.id %>">
+                                    <button class="redirect">✏️</button>
+                                </a>
+                                <form action="/users/delete/<%= user.id %>?_method=DELETE" method="post">
+                                    <button type="submit" class="redirect">❌</button>
+                                </form>
+                            </div>
+                        </article>
+                    </li>
+                <% } ) %>
+            </ul>
+        <% } %>
+
     </main>
     
 </body>

@@ -5,8 +5,16 @@ const { inputsValues, validationErrors } = require('../middlewares/validate-regi
 
 // /users/register
 router.get('/register', usersController.registerForm);
-router.post('/register',inputsValues, validationErrors, usersController.create)
+router.post('/register',inputsValues, validationErrors, usersController.create);
+
+// Ver Perfil
+router.get('/profile/:id', usersController.profile)
 
 // Agregar metodos Put y Delete
+router.get('/edit/:id', usersController.editForm)
+router.put('/edit/:id', usersController.updateUser);
+
+router.delete('/delete/:id', usersController.deleteUser);
+
 
 module.exports = router

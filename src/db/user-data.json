@@ -1,44 +1,8 @@
 [
   {
-    "id": "08e1b6a9-d552-4d4c-8d70-b855942478a2",
-    "username": "Lionel",
-    "email": "leo@dh.com",
+    "id": "851ddbb2-469d-447a-93a2-bd0279d10c64",
+    "username": "nahux",
+    "email": "nahuel-x@dh.com",
     "password": "admin"
-  },
-  {
-    "id": "52bd55d1-347d-49eb-8728-2ac0805a741a",
-    "username": "Seriogio",
-    "email": "sergio@dh.com",
-    "password": "admin2"
-  },
-  {
-    "id": "e53f3c57-09a7-4527-b9a7-da94c96b16f7",
-    "username": "Lionel",
-    "email": "david@dh.com",
-    "password": "asd"
-  },
-  {
-    "id": "bbfc2a16-b99b-44f1-9d07-4f82e3e6c086",
-    "username": "Lionel",
-    "email": "asd@gmail.com",
-    "password": "123"
-  },
-  {
-    "id": "9304ed8c-5bb4-4e35-b36c-775f319053ee",
-    "username": "Lionel",
-    "email": "asd@gmail.com",
-    "password": "sdf"
-  },
-  {
-    "id": "684f13c4-ed7e-439d-bab1-d9d9af2595bb",
-    "username": "Lionel",
-    "email": "asd@gmail.com",
-    "password": "dfg"
-  },
-  {
-    "id": "b4ef8f4e-ad20-40f9-85ed-8f16c879a49b",
-    "username": "Lionel",
-    "email": "david@dh.com",
-    "password": "dfg"
   }
 ]

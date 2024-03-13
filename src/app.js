@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('node:path');
+const methodOverride = require('method-override');
 
 // Public static
 app.use( express.static('public') );
@@ -12,6 +13,9 @@ app.use(express.json())
 // Configuracion de vistas
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views') );
+
+// Method Override -> PUT y DELETE 
+app.use(methodOverride('_method'));
 
 
 // Routes
