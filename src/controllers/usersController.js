@@ -3,6 +3,7 @@ const path = require('node:path');
 const crypto = require('crypto')
 const pathFile = path.join( __dirname, '..', 'db', 'user-data.json' );
 const userData = require('../db/user-data.json'); // Parsear JSON -> JS
+const { hashSync, compareSync } = require('bcryptjs')
 
 const controller = {
     registerForm: ( req, res ) =>{
@@ -10,9 +11,15 @@ const controller = {
     },
 
     create: (req, res) =>{
+        // console.log('BODY: ', req.body.password)
+        const passHash = hashSync( req.body.password, 10 );
+        // console.log('HASH: ' ,passHash)
+
         const newUser = {
             id: crypto.randomUUID(),
-            ...req.body
+            ...req.body,
+            password: passHash,
+            img: req.file?.filename || 'default-user.png'
         };
 
         // JS
@@ -34,6 +41,8 @@ const controller = {
 
     editForm: (req, res) =>{
         const idFound = req.params.id;
+
+        // const { id }  = req.params
 
         const userFound = userData.find( ( user ) => user.id === idFound );
 
@@ -69,6 +78,31 @@ const controller = {
         fs.writeFileSync(pathFile, JSON.stringify(newUsers, null, 2))
 
         res.redirect('/')
+    },
+
+    loginForm: (req, res) =>{
+        res.render('login')
+    },
+
+    log:(req, res)  =>{
+
+        const userFound = userData.find((user) => user.email === req.body.email );
+
+        if(userFound !== undefined){
+            // Contraseña
+            const isValid = compareSync( req.body.password, userFound.password );
+
+            if(isValid  === true){
+                return res.redirect('/')
+            }else{
+                return res.render('login')
+            }
+
+        }else{
+            return res.send('Usuario no encontrado')
+        }
+        
+    
     }
 }
 

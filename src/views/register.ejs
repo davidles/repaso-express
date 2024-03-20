@@ -7,7 +7,7 @@
 <body>
     <%- include('./partials/header.ejs') %>
     <main>
-        <form action="/users/register" method="post" class="form-data">
+        <form action="/users/register" method="post" class="form-data" enctype="multipart/form-data">
             <div class="label-form">
                 <label for="username">Nombre de usuario
                 </label>
@@ -35,6 +35,10 @@
                 <% } %>
             </div>
     
+            <div class="label-form">
+                <label for="avatar">Imagen</label>
+                <input type="file" name="avatar" id="avatar">
+            </div>
             <button type="submit">Registrarse</button>
             <a href="/users/login">
                 <button class="btn" type="button">Login</button>

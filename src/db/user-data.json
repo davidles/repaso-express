@@ -1,8 +1,9 @@
 [
   {
-    "id": "851ddbb2-469d-447a-93a2-bd0279d10c64",
-    "username": "nahux",
-    "email": "nahuel-x@dh.com",
-    "password": "admin"
+    "id": "1a735795-0134-4f63-b6a6-7905e88f9362",
+    "username": "Lionel",
+    "email": "agus@dh.com",
+    "password": "$2a$10$mo8kMQs/50n8vwL4dBYfiO2irVXOcGSaaJuaR8GlmJz/E6pDneLp.",
+    "img": "default-user.png"
   }
 ]
